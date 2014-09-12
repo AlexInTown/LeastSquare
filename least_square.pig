@@ -15,7 +15,7 @@ features = load '$input' as ($schema) ;
  This 'group all' clause won't let the 'features' really grouped into a single bag, if 
  you do not change the following group and foreach clause. Because 'FeatureTargetVector' 
  and 'FeatureVectorToMatrix' are implement using Java algebraic interface, the most of calculation 
- will done at mapper side, which is as efficient as pig built-in function like 'COUNT' and 'SUM'.
+ will be done at mapper side, which is as efficient as pig built-in function like 'COUNT' and 'SUM'.
  */
 features_grouped = group features all;
 vector = foreach features_grouped generate FeatureTargetVector(features) as vec:tuple() ; -- calculate XTy
