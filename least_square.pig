@@ -18,7 +18,7 @@ features = load '$input' as ($schema) ;
  will done at mapper side, which is as efficient as pig built-in function like 'COUNT' and 'SUM'.
  */
 features_grouped = group features all;
-vector = foreach features_grouped generate FeatureTargetVector(features) as vec:tuple($schema) ; -- calculate XTy
+vector = foreach features_grouped generate FeatureTargetVector(features) as vec:tuple() ; -- calculate XTy
 matrix = foreach features_grouped generate FeatureVectorToMatrix(features) as mat:bag{}; -- calculate XTX
 /*
  Calculate matrix inverse (XTX)^-1.
