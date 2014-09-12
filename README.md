@@ -13,7 +13,7 @@ From the Apache Pig official site (for pig version 0.12.1) about algebraic inter
 
 Steps to use the package:
 
-1.Copy 'run_least_square.sh' least_square.pig LeastSquare.jar into your working directory.
+1.Copy 'run_least_square.sh' 'least_square.pig' 'LeastSquare.jar' into your working directory.
 
 2.Change 'run_least_square.sh' to specify your input path, input data schema and output weight path.
 
